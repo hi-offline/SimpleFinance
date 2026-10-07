@@ -47,7 +47,20 @@ while True:
                     info_users.append([income, expenses, economy_month])
                     print("Dados adicionados com sucesso!")
                 case 2:
-                    pass
+                    if info_users == []:
+                        print("Nenhum registro para remover")
+                    else:
+                        for index in range(len(info_users)):
+                            print(index, info_users[index])
+
+                        input_remove = int(
+                            input("Digite o número do registro que deseja remover: "))
+
+                        if input_remove >= 0 and input_remove < len(info_users):
+                            info_users.pop(input_remove)
+                            print("Registro removido com sucesso!")
+                        else:
+                            print("Número inválido")
                 case 3:
                     pass
                 case 4:
